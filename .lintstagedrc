@@ -1,0 +1,9 @@
+{
+  "*.{scss,css,vue}": [
+    "stylelint --fix --max-warnings 0 --custom-syntax postcss-html"
+  ],
+  "*.{js,ts,vue}": [
+    "eslint --fix",
+    "prettier --write"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "extends": ["stylelint-config-recommended-vue/scss", "stylelint-config-clean-order"],
+  "ignoreFiles": "styles/responsive.scss",
+  "rules": {
+    "no-descending-specificity": null
+  }
+}

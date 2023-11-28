@@ -1,0 +1,51 @@
+module.exports = {
+  root: true,
+  env: {
+    node: true,
+    browser: true,
+    'vue/setup-compiler-macros': true,
+  },
+  extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', '@vue/typescript/recommended'],
+  plugins: ['vue', 'simple-import-sort', 'unused-imports'],
+  rules: {
+    'no-console': 'warn',
+    'no-alert': 'error',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'unused-imports/no-unused-imports': 'error',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+      },
+    ],
+    '@typescript-eslint/no-explicit-any': 'off',
+    'vue/max-attributes-per-line': 'off',
+    'vue/no-v-html': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/html-self-closing': 'off',
+    'vue/attributes-order': [
+      'error',
+      {
+        order: [
+          'LIST_RENDERING',
+          'CONDITIONALS',
+          'SLOT',
+          'RENDER_MODIFIERS',
+          'TWO_WAY_BINDING',
+          'DEFINITION',
+          'GLOBAL',
+          'UNIQUE',
+          'ATTR_DYNAMIC',
+          'ATTR_SHORTHAND_BOOL',
+          'ATTR_STATIC',
+          'CONTENT',
+          'OTHER_DIRECTIVES',
+          'EVENTS',
+        ],
+      },
+    ],
+  },
+};
