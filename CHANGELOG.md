@@ -1,6 +1,13 @@
 # 1.0.0 (2023-11-29)
 
 
+### Features
+
+* release setup ([94790a4](https://github.com/woolimi/wool-components/commit/94790a4c2f519d95a2830abbd8353a675b96d994))
+
+# 1.0.0 (2023-11-29)
+
+
 ### Bug Fixes
 
 * release config ([1ed3e2a](https://github.com/woolimi/wool-components/commit/1ed3e2aae19f3c486b16ea3e3095f44c2f7a4bd4))
