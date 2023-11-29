@@ -13,6 +13,14 @@ icon: 'carbon:bookmark'
 <br/>
 <br/>
 
+<video width="600" height="460" controls class="mx-auto border-black border-2">
+  <source src="https://prismic-io.s3.amazonaws.com/woolimi/9b4d8c28-52ca-4d9f-b504-12e6c8c264d0_Wool-Components.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video>
+
+<br/>
+<br/>
+
 <h2 class="text-4xl">🐑 Getting Started</h2>
 
 ## 1. Download
