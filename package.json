@@ -1,11 +1,11 @@
 {
   "name": "wool-components",
   "author": "Woolim Park",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "sideEffects": false,
   "homepage": "https://github.com/woolimi/wool-components#readme",
-  "description": "<p align=\"center\"> \t<img src=\"https://raw.githubusercontent.com/woolimi/wool-components/master/assets/sheep.svg\" alt=\"Wool Components\" width=\"300px\" height=\"300px\" /> </p> <h1 align=\"center\"> \t:sheep: Wool Components :sheep: </h1> <p align=\"center\"> \t<strong>FUCKING NOISY BUT CUTE</strong> <p> <p align=\"center\"> \tVue UI components library </p>",
+  "description": "FUCKING NOISY BUT CUTE Vue UI components library",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/woolimi/wool-components.git"
