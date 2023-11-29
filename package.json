@@ -35,7 +35,10 @@
     "lint": "eslint './{components,composables}/**/*.{js,ts,vue}' --fix",
     "stylelint": "stylelint 'components/**/*.{scss,css,vue}' --fix --max-warnings 0 --custom-syntax postcss-html",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "delete-tag": "bash ./scripts/delete-tag.sh",
+    "release": "yarn build && yarn semantic-release",
+    "this": "npm view wool-components versions"
   },
   "dependencies": {
     "@floating-ui/dom": "^1.5.3",
@@ -54,6 +57,8 @@
     "@formatjs/intl-getcanonicallocales": "^2.3.0",
     "@formatjs/intl-locale": "^3.4.3",
     "@histoire/plugin-vue": "^0.17.6",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/lodash-es": "^4.17.12",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
     "@typescript-eslint/parser": "^6.12.0",
@@ -77,6 +82,7 @@
     "prettier-plugin-tailwindcss": "^0.5.7",
     "rollup-plugin-typescript2": "^0.36.0",
     "sass": "^1.69.5",
+    "semantic-release": "^22.0.8",
     "stylelint": "^15.11.0",
     "stylelint-config-clean-order": "^5.2.0",
     "stylelint-config-recommended-scss": "^13.1.0",
