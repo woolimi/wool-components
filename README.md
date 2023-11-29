@@ -16,7 +16,7 @@
 
 # :sheep: Demo
 
-[https://woolimi.github.io/wool-components/](https://woolimi.github.io/wool-components/#/)
+[https://woolimi.github.io/wool-components/](https://woolimi.github.io/wool-components/#/story/introduction-story-js)
 
 <br/>
 <br/>
