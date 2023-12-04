@@ -10,10 +10,11 @@ icon: 'carbon:bookmark'
 	<span class="font-extrabold">FUCKING NOISY BUT CUTE<span><br/> Vue UI components library
 </p>
 
-<br/>
-<br/>
+<p class="text-center">
+	<a href="https://github.com/woolimi/wool-components" target="_blank">Go to Git repository</a>
+</p>
 
-<video width="600" height="460" controls class="mx-auto border-black border-2">
+<video width="600" height="460" controls class="mx-auto border-black border-2" poster="https://images.prismic.io/woolimi/7587747f-e1f7-454f-8226-222a945c7f33_wool+components.png?q=80&w=540">
   <source src="https://prismic-io.s3.amazonaws.com/woolimi/9b4d8c28-52ca-4d9f-b504-12e6c8c264d0_Wool-Components.mp4" type="video/mp4">
 	Your browser does not support the video tag.
 </video>
