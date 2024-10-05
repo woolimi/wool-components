@@ -24,7 +24,7 @@ export default {
     },
   },
   plugins: [
-    ({ addUtilities, matchUtilities, config, theme }) => {
+    ({ addUtilities, matchUtilities, theme }) => {
       // Add custom typo classes
       addUtilities({
         '.wc-base': {

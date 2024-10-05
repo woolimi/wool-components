@@ -58,7 +58,7 @@ defineExpose<{
 <template>
   <div
     :class="{ ['ml-1']: hideSheep, ['ml-[20px]']: !hideSheep }"
-    class="wc-base relative my-1 mr-1"
+    class="relative my-1 mr-1 wc-base"
     @click="playMeh"
   >
     <WSheep
@@ -78,7 +78,7 @@ defineExpose<{
         v-if="$slots.prepend"
         :class="{ ['cursor-not-allowed']: disabled }"
         class="ml-4 flex h-[30px] w-fit items-center justify-center p-1 text-[16px] [&_svg]:h-[25px] [&_svg]:w-[25px]"
-        @click="onAppendClick"
+        @click="onPrependClick"
       >
         <slot name="prepend" />
       </span>
@@ -103,7 +103,7 @@ defineExpose<{
         v-if="$slots.append"
         :class="{ ['cursor-not-allowed']: disabled }"
         class="mx-1 flex w-fit items-center justify-center p-1 text-[16px] [&_svg]:h-[25px] [&_svg]:w-[25px]"
-        @click="onPrependClick"
+        @click="onAppendClick"
       >
         <slot name="append" />
       </span>
