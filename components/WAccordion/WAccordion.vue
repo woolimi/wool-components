@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { PlusIcon } from '@heroicons/vue/24/solid';
+import { mdiPlus } from '@mdi/js';
 import { vOnClickOutside } from '@vueuse/components';
 import { useElementBounding } from '@vueuse/core';
 import colors from 'tailwindcss/colors';
 import { ref } from 'vue';
 
 import WButton from '@/components/WButton';
+import WIcon from '@/components/WIcon';
 defineProps({
   closeClickOutside: {
     type: Boolean,
@@ -31,9 +32,10 @@ const { height: contentHeight } = useElementBounding(content);
     >
       <div class="flex items-center justify-between gap-1">
         <slot name="title" />
-        <PlusIcon
+        <WIcon
+          :path="mdiPlus"
           :class="{ ['rotate-[45deg]']: active }"
-          class="h-[24px] w-[24px] transition-transform duration-500"
+          class="h-[24px] w-[24px] text-white transition-transform duration-500"
         />
       </div>
     </WButton>

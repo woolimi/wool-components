@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ChevronDownIcon } from '@heroicons/vue/24/solid';
+import { mdiChevronDown } from '@mdi/js';
 import { vOnClickOutside } from '@vueuse/components';
 import { computed, PropType, ref } from 'vue';
 
+import WIcon from '@/components/WIcon';
 import WInput from '@/components/WInput';
 import WLabel from '@/components/WLabel';
 import { useDropdown } from '@/composables/useDropdown';
@@ -106,7 +107,8 @@ const onKeyDown = (event: KeyboardEvent) => {
       @keydown.stop="onKeyDown"
     >
       <template #append>
-        <ChevronDownIcon
+        <WIcon
+          :path="mdiChevronDown"
           :class="{ ['rotate-180']: active }"
           class="h-[30px] w-[30px] transition-transform duration-200"
         />

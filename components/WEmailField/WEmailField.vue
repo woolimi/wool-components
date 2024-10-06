@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { AtSymbolIcon } from '@heroicons/vue/24/solid';
+import { mdiAt } from '@mdi/js';
 import { watchDebounced } from '@vueuse/core';
 import { ref } from 'vue';
 
 import { WError, WInput, WLabel } from '@/components';
+import WIcon from '@/components/WIcon';
 import { useIds } from '@/composables/useIds';
 import { InputType } from '@/types';
 
@@ -50,7 +51,7 @@ const inputEl = ref<typeof WInput>();
       @input="onInput"
     >
       <template #append>
-        <AtSymbolIcon />
+        <WIcon :path="mdiAt" class="h-[24px] w-[24px]" />
       </template>
     </WInput>
     <WError :error-message="errorMessage" />

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CalendarIcon } from '@heroicons/vue/24/solid';
+import { mdiCalendar } from '@mdi/js';
 import { vOnClickOutside } from '@vueuse/components';
 import { useVModel } from '@vueuse/core';
 import { isValid as dateIsValid } from 'date-fns/fp';
@@ -7,6 +7,7 @@ import { computed, PropType, reactive, ref, watch } from 'vue';
 
 import WDatePicker from '@/components/WDatePicker';
 import WError from '@/components/WError';
+import WIcon from '@/components/WIcon';
 import WInput from '@/components/WInput';
 import WLabel from '@/components/WLabel';
 import { useDateTime } from '@/composables/useDateTime';
@@ -180,7 +181,7 @@ watch(
           arial-label="Open date picker"
           @click="active = true"
         >
-          <CalendarIcon />
+          <WIcon :path="mdiCalendar" />
         </button>
       </template>
     </WInput>

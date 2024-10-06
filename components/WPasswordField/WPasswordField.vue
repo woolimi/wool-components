@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { EyeIcon, EyeSlashIcon } from '@heroicons/vue/24/solid';
+import { mdiEye, mdiEyeOff } from '@mdi/js';
 import { computed, ref } from 'vue';
 
+import WIcon from '@/components/WIcon';
 import WInput from '@/components/WInput';
 import WLabel from '@/components/WLabel';
 import { useIds } from '@/composables/useIds';
@@ -55,11 +56,12 @@ const grade = computed(() => {
       @blur="active = false"
     >
       <template #append>
-        <EyeSlashIcon
+        <WIcon
           v-if="inputType === InputType.PASSWORD"
+          :path="mdiEyeOff"
           @click="changeInputType(InputType.TEXT)"
         />
-        <EyeIcon v-else @click="changeInputType(InputType.PASSWORD)" />
+        <WIcon v-else :path="mdiEye" @click="changeInputType(InputType.PASSWORD)" />
       </template>
     </WInput>
 

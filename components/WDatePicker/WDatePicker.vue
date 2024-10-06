@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { pipe } from '@fxts/core';
-import { ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/vue/24/solid';
+import { mdiChevronDown, mdiChevronLeft, mdiChevronRight } from '@mdi/js';
 import { useMediaQuery } from '@vueuse/core';
 import {
   addMonths,
@@ -16,6 +16,7 @@ import {
 } from 'date-fns/fp';
 import { computed, PropType, ref, watch } from 'vue';
 
+import WIcon from '@/components/WIcon';
 import { useDateTime } from '@/composables/useDateTime';
 
 import MonthPicker from './MonthPicker.vue';
@@ -139,7 +140,7 @@ watch(
           class="rounded-[50%] p-2 hover:bg-gray-100 disabled:bg-inherit disabled:text-gray-300"
           @click="changeMonth(-1)"
         >
-          <ChevronLeftIcon class="h-[24px] w-[24px]" />
+          <WIcon :path="mdiChevronLeft" class="h-[24px] w-[24px]" />
         </button>
         <div class="flex items-center gap-2">
           <button
@@ -154,7 +155,8 @@ watch(
             class="rounded-[50%] p-2 hover:bg-gray-100"
             @click="showPicker === 'year' ? (showPicker = false) : (showPicker = 'year')"
           >
-            <ChevronDownIcon
+            <WIcon
+              :path="mdiChevronDown"
               :class="{ ['rotate-180']: showPicker === 'year' }"
               class="h-[20px] w-[20px] transition-transform"
             />
@@ -165,7 +167,7 @@ watch(
           class="rounded-[50%] p-2 hover:bg-gray-100 disabled:bg-inherit disabled:text-gray-300"
           @click="changeMonth(1)"
         >
-          <ChevronRightIcon class="h-[24px] w-[24px]" />
+          <WIcon :path="mdiChevronRight" class="h-[24px] w-[24px]" />
         </button>
       </header>
 

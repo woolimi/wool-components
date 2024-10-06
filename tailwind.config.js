@@ -7,7 +7,7 @@ const { generateDefaultColors } = useColors();
 const palette = generateDefaultColors();
 
 export default {
-  content: ['./components/**/*.{ts,vue}', '**/*.md'],
+  content: ['./components/**/*.{ts,vue}', './*.md'],
   theme: {
     screens: {
       '-2xl': { max: '1536px' },

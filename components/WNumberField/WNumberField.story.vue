@@ -1,7 +1,8 @@
 <script setup>
-import { CurrencyEuroIcon } from '@heroicons/vue/24/solid';
+import { mdiCurrencyEur } from '@mdi/js';
 
 import { WNumberField } from '@/components';
+import WIcon from '@/components/WIcon';
 
 const initState = () => ({
   label: 'Number',
@@ -38,7 +39,7 @@ const initState = () => ({
           locale="fr"
         >
           <template #append>
-            <CurrencyEuroIcon />
+            <WIcon :path="mdiCurrencyEur" />
           </template>
         </WNumberField>
       </template>

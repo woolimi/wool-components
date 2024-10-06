@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { Bars3Icon, ChevronDownIcon, ChevronRightIcon } from '@heroicons/vue/24/solid';
+import { mdiChevronDown, mdiChevronRight, mdiMenu } from '@mdi/js';
 import { vOnClickOutside } from '@vueuse/components';
 import { ref, watch } from 'vue';
 
+import WIcon from '@/components/WIcon';
 import WSheep from '@/components/WSheep';
 import { useIds } from '@/composables/useIds';
 import { useMeh } from '@/composables/useMeh';
@@ -74,7 +75,7 @@ watch(active, () => {
         class="rounded-[50%] !border-none p-1 focus:wc-focus -sm:hidden"
         @click="active = !active"
       >
-        <Bars3Icon class="h-[30px] w-[30px] text-black" />
+        <WIcon :path="mdiMenu" class="h-[30px] w-[30px] text-black" />
       </button>
 
       <ul
@@ -92,7 +93,7 @@ watch(active, () => {
             @click="onActive(id, m.to)"
           >
             {{ m.text }}
-            <ChevronDownIcon v-if="m.items" class="h-[16px] w-[16px]" />
+            <WIcon v-if="m.items" :path="mdiChevronRight" class="h-[16px] w-[16px]" />
           </component>
 
           <ul
@@ -114,8 +115,16 @@ watch(active, () => {
                 @mouseover.self="onActiveId2Desktop(id2)"
               >
                 {{ m2.text }}
-                <ChevronRightIcon v-if="m2.items" class="h-[16px] w-[16px] -sm:hidden" />
-                <ChevronDownIcon v-if="m2.items" class="h-[16px] w-[16px] -sm:hidden" />
+                <WIcon
+                  v-if="m2.items"
+                  :path="mdiChevronRight"
+                  class="h-[16px] w-[16px] -sm:hidden"
+                />
+                <WIcon
+                  v-if="m2.items"
+                  :path="mdiChevronDown"
+                  class="h-[16px] w-[16px] -sm:hidden"
+                />
               </component>
               <ul
                 v-if="m2.items"

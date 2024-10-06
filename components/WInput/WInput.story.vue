@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { CurrencyEuroIcon } from '@heroicons/vue/24/solid';
+import { mdiCurrencyEur } from '@mdi/js';
 import { reactive } from 'vue';
 
+import WIcon from '@/components/WIcon';
 import { InputType } from '@/types';
 
 import WInput from './WInput.vue';
@@ -23,13 +24,31 @@ const onInput = (e: InputEvent) => {
       <WInput :value="state.value" :type="state.type" placeholder="Type here..." @input="onInput" />
     </Variant>
     <Variant title="hide sheep">
-      <WInput :value="state.value" :type="state.type" hide-sheep placeholder="Type here..." @input="onInput" />
+      <WInput
+        :value="state.value"
+        :type="state.type"
+        hide-sheep
+        placeholder="Type here..."
+        @input="onInput"
+      />
     </Variant>
     <Variant title="error">
-      <WInput :value="state.value" :type="state.type" error placeholder="Type here..." @input="onInput" />
+      <WInput
+        :value="state.value"
+        :type="state.type"
+        error
+        placeholder="Type here..."
+        @input="onInput"
+      />
     </Variant>
     <Variant title="disabled">
-      <WInput :value="state.value" :type="state.type" disabled placeholder="Type here..." @input="onInput" />
+      <WInput
+        :value="state.value"
+        :type="state.type"
+        disabled
+        placeholder="Type here..."
+        @input="onInput"
+      />
     </Variant>
     <Variant title="prepend icon">
       <WInput :value="state.value" :type="state.type" placeholder="Type here..." @input="onInput">
@@ -56,9 +75,15 @@ const onInput = (e: InputEvent) => {
       </WInput>
     </Variant>
     <Variant title="disabled with icon">
-      <WInput :value="state.value" :type="state.type" disabled placeholder="Type here..." @input="onInput">
+      <WInput
+        :value="state.value"
+        :type="state.type"
+        disabled
+        placeholder="Type here..."
+        @input="onInput"
+      >
         <template #append>
-          <CurrencyEuroIcon />
+          <WIcon :path="mdiCurrencyEur" />
         </template>
       </WInput>
     </Variant>

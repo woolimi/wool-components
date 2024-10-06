@@ -2,11 +2,12 @@
 import { shouldPolyfill as shouldPolyfillDisplayNames } from '@formatjs/intl-displaynames/should-polyfill';
 import { shouldPolyfill } from '@formatjs/intl-getcanonicallocales/should-polyfill';
 import { shouldPolyfill as shouldPolyfillLocale } from '@formatjs/intl-locale/should-polyfill';
-import { ChevronDownIcon } from '@heroicons/vue/24/solid';
+import { mdiChevronDown } from '@mdi/js';
 import { vOnClickOutside } from '@vueuse/components';
 import { CountryCode } from 'libphonenumber-js';
 import { computed, nextTick, onMounted, PropType, ref, toRef, watch } from 'vue';
 
+import WIcon from '@/components/WIcon';
 import WInput from '@/components/WInput';
 import { useDropdown } from '@/composables/useDropdown';
 import { useIds } from '@/composables/useIds';
@@ -183,7 +184,8 @@ onMounted(async () => {
           </button>
         </template>
         <template #append>
-          <ChevronDownIcon
+          <WIcon
+            :path="mdiChevronDown"
             :class="{ ['rotate-180']: active }"
             class="h-[30px] w-[30px] transition-transform duration-200"
           />

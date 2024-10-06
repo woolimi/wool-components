@@ -43,7 +43,7 @@
   "dependencies": {
     "@floating-ui/dom": "^1.5.3",
     "@fxts/core": "^0.23.0",
-    "@heroicons/vue": "^2.0.18",
+    "@mdi/js": "^7.4.47",
     "@vueuse/components": "^10.6.1",
     "@vueuse/core": "^10.6.1",
     "color": "^4.2.3",
@@ -81,7 +81,7 @@
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
     "rollup-plugin-typescript2": "^0.36.0",
-    "sass": "^1.69.5",
+    "sass": "1.69.5",
     "semantic-release": "^22.0.8",
     "stylelint": "^15.11.0",
     "stylelint-config-clean-order": "^5.2.0",
