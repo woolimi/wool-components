@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/woolimi/wool-components/compare/v1.0.0...v1.1.0) (2024-10-06)
+
+
+### Bug Fixes
+
+* Keep original tailwind breakpoint class ([121c684](https://github.com/woolimi/wool-components/commit/121c68413e9c96d83ca73620168088be8f54415c))
+* WInput click event naming ([5962427](https://github.com/woolimi/wool-components/commit/5962427aebeaaa8ba8274afd82fe20d30980395e))
+
+
+### Features
+
+* WIcon ([524ff34](https://github.com/woolimi/wool-components/commit/524ff34c537c25565bd8cbe00a34684232ef67bb))
+
 # 1.0.0 (2023-11-29)
 
 ### Features
