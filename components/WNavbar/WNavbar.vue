@@ -58,7 +58,7 @@ watch(active, () => {
 </script>
 <template>
   <nav class="wc-base" v-on-click-outside="onInactive">
-    <div class="flex items-center gap-3 bg-white p-2 shadow-lg sm:relative sm:justify-between">
+    <div class="flex items-center gap-3 bg-white p-2 shadow-lg -sm:relative -sm:justify-between">
       <slot name="logo">
         <a
           tabindex="0"
@@ -71,7 +71,7 @@ watch(active, () => {
       </slot>
 
       <button
-        class="rounded-[50%] !border-none p-1 focus:wc-focus up-sm:hidden"
+        class="rounded-[50%] !border-none p-1 focus:wc-focus -sm:hidden"
         @click="active = !active"
       >
         <Bars3Icon class="h-[30px] w-[30px] text-black" />
@@ -79,16 +79,16 @@ watch(active, () => {
 
       <ul
         :class="{
-          ['left-0 sm:top-full sm:!flex sm:w-full sm:border-t-black sm:shadow-lg']: active,
+          ['left-0 -sm:top-full -sm:!flex -sm:w-full -sm:border-t-black -sm:shadow-lg']: active,
         }"
-        class="flex flex-wrap gap-2 bg-white p-1 sm:absolute sm:hidden sm:flex-col"
+        class="flex flex-wrap gap-2 bg-white p-1 -sm:absolute -sm:hidden -sm:flex-col"
       >
         <li v-for="(m, id) in model" :key="id" class="relative wc-text">
           <component
             :is="m.to ? 'a' : 'button'"
             :href="m.to"
             :class="{ ['!bg-sky-500 text-white']: activeId === id }"
-            class="flex w-full cursor-pointer items-center gap-1 px-3 py-3 text-left transition-all wc-rounded hover:wc-disabled-bg focus:!border-none focus:wc-focus sm:justify-between sm:text-left"
+            class="flex w-full cursor-pointer items-center gap-1 px-3 py-3 text-left transition-all wc-rounded hover:wc-disabled-bg focus:!border-none focus:wc-focus -sm:justify-between -sm:text-left"
             @click="onActive(id, m.to)"
           >
             {{ m.text }}
@@ -98,7 +98,7 @@ watch(active, () => {
           <ul
             v-if="m.items"
             :class="[{ ['!flex']: activeId === id }]"
-            class="absolute left-0 top-[calc(100%+8px)] hidden w-max flex-col gap-2 bg-white p-2 wc-shadow sm:static sm:my-1 sm:w-full sm:pl-6 sm:pr-0 sm:shadow-none"
+            class="absolute left-0 top-[calc(100%+8px)] hidden w-max flex-col gap-2 bg-white p-2 wc-shadow -sm:static -sm:my-1 -sm:w-full -sm:pl-6 -sm:pr-0 -sm:shadow-none"
           >
             <li
               v-for="(m2, id2) in m.items"
@@ -114,13 +114,13 @@ watch(active, () => {
                 @mouseover.self="onActiveId2Desktop(id2)"
               >
                 {{ m2.text }}
-                <ChevronRightIcon v-if="m2.items" class="h-[16px] w-[16px] sm:hidden" />
-                <ChevronDownIcon v-if="m2.items" class="h-[16px] w-[16px] up-sm:hidden" />
+                <ChevronRightIcon v-if="m2.items" class="h-[16px] w-[16px] -sm:hidden" />
+                <ChevronDownIcon v-if="m2.items" class="h-[16px] w-[16px] -sm:hidden" />
               </component>
               <ul
                 v-if="m2.items"
                 :class="[{ ['!flex']: activeId2 === id2 && m2.items }]"
-                class="absolute left-[calc(100%+9px)] top-0 hidden w-max flex-col gap-2 bg-white p-2 wc-shadow sm:static sm:left-0 sm:top-full sm:my-1 sm:w-full sm:pl-6 sm:pr-0 sm:shadow-none"
+                class="absolute left-[calc(100%+9px)] top-0 hidden w-max flex-col gap-2 bg-white p-2 wc-shadow -sm:static -sm:left-0 -sm:top-full -sm:my-1 -sm:w-full -sm:pl-6 -sm:pr-0 -sm:shadow-none"
               >
                 <li v-for="(m3, id3) in m2.items" :key="`m3-${id3}`">
                   <a

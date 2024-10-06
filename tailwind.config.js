@@ -10,16 +10,11 @@ export default {
   content: ['./components/**/*.{ts,vue}', '**/*.md'],
   theme: {
     screens: {
-      lg: { max: '1280px' },
-      md: { max: '960px' },
-      sm: { max: '720px' },
-      xs: { max: '540px' },
-      xxs: { max: '320px' },
-      'up-lg': { min: '1281px' },
-      'up-md': { min: '961px' },
-      'up-sm': { min: '721px' },
-      'up-xs': { min: '541px' },
-      'up-xxs': { min: '321px' },
+      '-2xl': { max: '1536px' },
+      '-xl': { max: '1280px' },
+      '-lg': { max: '1024px' },
+      '-md': { max: '768px' },
+      '-sm': { max: '640px' },
       'except-touch': { raw: '(hover: hover) and (pointer: fine)' }, // block hovering effect on touch device
     },
   },
