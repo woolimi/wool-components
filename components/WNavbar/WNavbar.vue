@@ -72,7 +72,7 @@ watch(active, () => {
       </slot>
 
       <button
-        class="rounded-[50%] !border-none p-1 focus:wc-focus -sm:hidden"
+        class="rounded-[50%] !border-none p-1 focus:wc-focus sm:hidden"
         @click="active = !active"
       >
         <WIcon :path="mdiMenu" class="h-[30px] w-[30px] text-black" />
@@ -89,11 +89,11 @@ watch(active, () => {
             :is="m.to ? 'a' : 'button'"
             :href="m.to"
             :class="{ ['!bg-sky-500 text-white']: activeId === id }"
-            class="flex w-full cursor-pointer items-center gap-1 px-3 py-3 text-left transition-all wc-rounded hover:wc-disabled-bg focus:!border-none focus:wc-focus -sm:justify-between -sm:text-left"
+            class="flex w-full cursor-pointer items-center gap-1 px-3 py-3 text-left transition-all wc-rounded hover:wc-disabled-bg focus:!border-none focus:wc-focus sm:justify-between sm:text-left"
             @click="onActive(id, m.to)"
           >
             {{ m.text }}
-            <WIcon v-if="m.items" :path="mdiChevronRight" class="h-[16px] w-[16px]" />
+            <WIcon v-if="m.items" :path="mdiChevronDown" class="h-[16px] w-[16px]" />
           </component>
 
           <ul
@@ -120,11 +120,7 @@ watch(active, () => {
                   :path="mdiChevronRight"
                   class="h-[16px] w-[16px] -sm:hidden"
                 />
-                <WIcon
-                  v-if="m2.items"
-                  :path="mdiChevronDown"
-                  class="h-[16px] w-[16px] -sm:hidden"
-                />
+                <WIcon v-if="m2.items" :path="mdiChevronDown" class="h-[16px] w-[16px] sm:hidden" />
               </component>
               <ul
                 v-if="m2.items"
