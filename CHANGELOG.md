@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/woolimi/wool-components/compare/v1.1.0...v1.1.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* navbar and screens ([af9ae55](https://github.com/woolimi/wool-components/commit/af9ae5593d1b8804e7375aa70131869e06415b07))
+
 # [1.1.0](https://github.com/woolimi/wool-components/compare/v1.0.0...v1.1.0) (2024-10-06)
 
 
