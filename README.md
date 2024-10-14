@@ -46,3 +46,28 @@ createApp(App).mount('#app');
 import { WButton } from 'wool-components';
 </script>
 ```
+
+## 4. Breakpoint setup
+
+Please remind that wool-component has following breakpoint setup by default.
+
+```js
+// tailwind.config.js
+{
+	...,
+  theme: {
+    screens: {
+			'-lg': { max: '1280px' }, // apply to lower than 1280px screen
+			'-md': { max: '960px' },  // apply to lower than 960px screen
+			'-sm': { max: '720px' },  // apply to lower than 720px screen
+			'-xs': { max: '540px' },  // apply to lower than 540px screen
+			'-xxs': { max: '320px' }, // apply to lower than 320px screen
+			lg: { min: '1281px' }, // apply to hight than 1281px screen
+			md: { min: '961px' },  // apply to hight than 961px screen
+			sm: { min: '721px' },  // apply to hight than 721px screen
+			xs: { min: '541px' },  // apply to hight than 541px screen
+			xxs: { min: '321px' }, // apply to hight than 321px screen
+		}
+	}
+}
+```
